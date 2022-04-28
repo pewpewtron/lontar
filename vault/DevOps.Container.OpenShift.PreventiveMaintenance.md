@@ -2,17 +2,20 @@
 id: yk05se0mtsbfd6ajo7yygm1
 title: PreventiveMaintenance
 desc: ''
-updated: 1651149116028
+updated: 1651149441905
 created: 1651144905621
 ---
 
 ## Preventive Maintenance Task list and what to do
+
+tldr: Check cluster status and health by using oc get node, co, and mcp, then collect logs for each node (cpu and memory, and disk), and check the logs apps (using naamespace) and collect cpu, and memmory logs .
 
 ### 1. Login to bastion
 
 `oc login -u system:admin -p your-super-secure-password`
 
 ### 2. Check cluster status
+
 Check cluster node, cluster operator and machine config (mcp)
 
 `oc get nodes`
@@ -77,7 +80,7 @@ master   rendered-master-28a6d31181071d3d6c5aa84ef859bfa8   True      False     
 worker   rendered-worker-58f0014151041d84bc0c18875388ba8b   True      False      False      3              3                   3                     0                      14d
 ```
 
-3. Check list to be looking for in grafana
+### 3. Check list to be looking for in grafana
 
 add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` and add ip adress and list of the host name for example:
 
