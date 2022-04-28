@@ -2,13 +2,13 @@
 id: yk05se0mtsbfd6ajo7yygm1
 title: PreventiveMaintenance
 desc: ''
-updated: 1651149441905
+updated: 1651151232032
 created: 1651144905621
 ---
 
 ## Preventive Maintenance Task list and what to do
 
-tldr: Check cluster status and health by using oc get node, co, and mcp, then collect logs for each node (cpu and memory, and disk), and check the logs apps (using naamespace) and collect cpu, and memmory logs .
+TLDR: Check cluster status and health by using oc get node, co, and mcp, then collect logs for each node (cpu and memory, and disk), and check the logs apps (using naamespace) and collect cpu, and memmory logs .
 
 ### 1. Login to bastion
 
@@ -94,7 +94,7 @@ add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` 
 > note:
 > forgot TBD
 
-to view application logs open grafana and click on box in side bar then select manage > default > Kubernetes / Compute Resources / Namespace (Pods)
+to view application logs open grafana and click on box in side bar then select manage > default > TBD
 
 - [ ] Grafana graph resource utilization for each node
 
