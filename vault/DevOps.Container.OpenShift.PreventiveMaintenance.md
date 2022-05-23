@@ -2,7 +2,7 @@
 id: yk05se0mtsbfd6ajo7yygm1
 title: PreventiveMaintenance
 desc: ''
-updated: 1651151232032
+updated: 1653292201233
 created: 1651144905621
 ---
 
@@ -84,7 +84,7 @@ worker   rendered-worker-58f0014151041d84bc0c18875388ba8b   True      False     
 
 add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` and add ip adress and list of the host name for example:
 
-```
+```conf
 # add this before end of file
 102.54.94.97    rhino.acme.com         
 38.25.63.10     x.acme.com
@@ -94,7 +94,7 @@ add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` 
 > note:
 > forgot TBD
 
-to view application logs open grafana and click on box in side bar then select manage > default > TBD
+To view application logs open grafana and click Dashboard > Manage > Default then Select `Node Exporter / USE Method / Node`
 
 - [ ] Grafana graph resource utilization for each node
 
@@ -102,7 +102,7 @@ to view application logs open grafana and click on box in side bar then select m
   - [ ] Memory
   - [ ] Disk
 
-to view application logs open grafana and click on box in side bar then select manage > default > Kubernetes / Compute Resources / Namespace (Pods)
+To view application logs open grafana and click Dashboard > Manage > Default then Select `Kubernetes / Compute Resources / Namespace (Pods)`
 
 > note:
 > select time range to 2 weeks
@@ -112,3 +112,53 @@ to view application logs open grafana and click on box in side bar then select m
 
   - [ ] CPU
   - [ ] Memory
+
+### 4. Check Image Registry operator
+
+Check `openshift-image-registry` namespace then select `image-registry-` pod open its terminal and check disk utils
+Sample output:
+
+```bash
+sh-4.4$ df -h
+Filesystem                                             Size  Used Avail Use% Mounted on
+overlay                                                100G   30G   71G  30% /
+tmpfs                                                   64M     0   64M   0% /dev
+tmpfs                                                  7.9G     0  7.9G   0% /sys/fs/cgroup
+shm                                                     64M     0   64M   0% /dev/shm
+tmpfs                                                  7.9G   56M  7.8G   1% /etc/passwd
+bastion.ocp-drc.hanabank.co.id:/var/nfs/pv-registry-1   96G   27G   69G  28% /registry
+tmpfs                                                   15G  8.0K   15G   1% /etc/secrets
+/dev/mapper/coreos-luks-root-nocrypt                   100G   30G   71G  30% /etc/hosts
+tmpfs                                                   15G  4.0K   15G   1% /var/lib/kubelet
+tmpfs                                                   15G  4.0K   15G   1% /run/secrets/openshift/serviceaccount
+tmpfs                                                   15G   28K   15G   1% /run/secrets/kubernetes.io/serviceaccount
+tmpfs                                                  7.9G     0  7.9G   0% /proc/acpi
+tmpfs                                                  7.9G     0  7.9G   0% /proc/scsi
+tmpfs                                                  7.9G     0  7.9G   0% /sys/firmware
+sh-4.4$
+```
+
+### 4. Check monitoring operator
+
+Check `openshift-monitoring` namespace then select `prometheus-k8s-` pod open its terminal and check disk utils
+Sample output:
+
+```bash
+sh-4.4$ df -h
+Filesystem                                             Size  Used Avail Use% Mounted on
+overlay                                                100G   30G   71G  30% /
+tmpfs                                                   64M     0   64M   0% /dev
+tmpfs                                                  7.9G     0  7.9G   0% /sys/fs/cgroup
+shm                                                     64M     0   64M   0% /dev/shm
+tmpfs                                                  7.9G   56M  7.8G   1% /etc/passwd
+bastion.ocp-drc.hanabank.co.id:/var/nfs/pv-registry-1   96G   27G   69G  28% /registry
+tmpfs                                                   15G  8.0K   15G   1% /etc/secrets
+/dev/mapper/coreos-luks-root-nocrypt                   100G   30G   71G  30% /etc/hosts
+tmpfs                                                   15G  4.0K   15G   1% /var/lib/kubelet
+tmpfs                                                   15G  4.0K   15G   1% /run/secrets/openshift/serviceaccount
+tmpfs                                                   15G   28K   15G   1% /run/secrets/kubernetes.io/serviceaccount
+tmpfs                                                  7.9G     0  7.9G   0% /proc/acpi
+tmpfs                                                  7.9G     0  7.9G   0% /proc/scsi
+tmpfs                                                  7.9G     0  7.9G   0% /sys/firmware
+sh-4.4$
+```
