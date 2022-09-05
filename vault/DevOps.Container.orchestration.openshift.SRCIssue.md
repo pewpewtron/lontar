@@ -2,7 +2,7 @@
 id: nmx2b1qf4bgy74er0tg8lxh
 title: CSRIssue
 desc: ''
-updated: 1651152423367
+updated: 1662386487526
 created: 1651151442682
 ---
 
@@ -25,7 +25,7 @@ oc get co
 oc get csr
 ```
 
-### 3. Check CSR 
+### 3. Check CSR
 
 when running `oc get csr` command, you will if theres a CSR pending, check the detail by using `oc describe` subcommand
 
