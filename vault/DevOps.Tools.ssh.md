@@ -2,7 +2,7 @@
 id: bdjaja4xyr9goopr7mxyigt
 title: ssh
 desc: ''
-updated: 1662819597371
+updated: 1662820849666
 created: 1662816839907
 ---
 
@@ -71,7 +71,7 @@ login to your server/remote machine using existing solution (ssh or rdp)
 
 create new directory and file at user directory either root or normal user
 
-```
+```bash
 mkdir -p /home/user/.ssh/
 # or
 mkdir -p /root/.ssh/
