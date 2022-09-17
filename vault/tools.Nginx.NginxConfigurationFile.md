@@ -2,7 +2,7 @@
 id: 21cgvbwyd0y7pih8hh4jyi0
 title: NginxConfigurationFile
 desc: ''
-updated: 1651223242646
+updated: 1663423797738
 created: 1651219869855
 ---
 
@@ -33,7 +33,7 @@ server {
          fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
          include fastcgi_params;
-	 autoindex on;
+         autoindex on;
     }
 }
 ```

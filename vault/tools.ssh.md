@@ -1,6 +1,6 @@
 ---
 id: bdjaja4xyr9goopr7mxyigt
-title: ssh
+title: Ssh
 desc: ''
 updated: 1662820849666
 created: 1662816839907
