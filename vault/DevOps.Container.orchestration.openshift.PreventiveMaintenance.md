@@ -2,7 +2,7 @@
 id: yk05se0mtsbfd6ajo7yygm1
 title: PreventiveMaintenance
 desc: ''
-updated: 1653292201233
+updated: 1663394798183
 created: 1651144905621
 ---
 
@@ -82,7 +82,7 @@ worker   rendered-worker-58f0014151041d84bc0c18875388ba8b   True      False     
 
 ### 3. Check list to be looking for in grafana
 
-add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` and add ip adress and list of the host name for example:
+add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` and add ip address and list of the host name for example:
 
 ```conf
 # add this before end of file
@@ -92,7 +92,10 @@ add mapp host name to IP address in this file `C:\Windows\System32\drivers\etc` 
 ```
 
 > note:
-> forgot TBD
+> select time range to 2 weeks
+> select refresh range to 5 seconds interval
+
+#### 3.1 Check Node resource utilization
 
 To view application logs open grafana and click Dashboard > Manage > Default then Select `Node Exporter / USE Method / Node`
 
@@ -102,11 +105,9 @@ To view application logs open grafana and click Dashboard > Manage > Default the
   - [ ] Memory
   - [ ] Disk
 
-To view application logs open grafana and click Dashboard > Manage > Default then Select `Kubernetes / Compute Resources / Namespace (Pods)`
+#### 3.2 Check namespace resource utilization
 
-> note:
-> select time range to 2 weeks
-> select refresh range to 5 seconds interval
+To view application logs open grafana and click Dashboard > Manage > Default then Select `Kubernetes / Compute Resources / Namespace (Pods)`
 
 - [ ] Grafana graph resource utilization for each application
 
