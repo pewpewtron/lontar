@@ -2,7 +2,7 @@
 id: yk05se0mtsbfd6ajo7yygm1
 title: PreventiveMaintenance
 desc: ''
-updated: 1663394798183
+updated: 1663674111749
 created: 1651144905621
 ---
 
@@ -139,7 +139,7 @@ tmpfs                                                  7.9G     0  7.9G   0% /sy
 sh-4.4$
 ```
 
-### 4. Check monitoring operator
+### 5. Check monitoring operator
 
 Check `openshift-monitoring` namespace then select `prometheus-k8s-` pod open its terminal and check disk utils
 Sample output:
