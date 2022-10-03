@@ -2,7 +2,7 @@
 id: 48rvbys4bs9nz2x2zt4vosq
 title: Firewalld
 desc: ''
-updated: 1664788617180
+updated: 1664789109207
 created: 1664787529438
 ---
 
