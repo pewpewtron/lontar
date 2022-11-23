@@ -2,7 +2,7 @@
 id: dd5wfeuak0qj7kanwhphjmm
 title: ImagePullSecret
 desc: ''
-updated: 1665049688464
+updated: 1668503324909
 created: 1665049415430
 ---
 
