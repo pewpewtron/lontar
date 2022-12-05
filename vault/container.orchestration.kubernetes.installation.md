@@ -2,11 +2,16 @@
 id: ftuylacrafj78ugbjsfk44e
 title: Installation
 desc: ''
-updated: 1670147443706
+updated: 1670234311970
 created: 1669705403919
 ---
 
 Installing K8s on Ubuntu 20.04
+
+prerequisite before installing
+
+* static ip address
+* hostname set for each node
 
 ## 1. Update your Ubuntu instance
 
@@ -287,6 +292,7 @@ kubectl get nodes -o wide
 
 > **Note**
 >
+> Setting up worker node you need to follow Step 1, 2, 3, 4, above
 > For adding new node to existing cluster you can follow this article
 >
 > * [Add new node to existing cluster](https://computingforgeeks.com/join-new-kubernetes-worker-node-to-existing-cluster/)
